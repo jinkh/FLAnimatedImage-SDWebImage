@@ -104,7 +104,9 @@
     [self.view addSubview:self.imageView3];
     self.imageView3.frame = CGRectMake(389.0, 577.0, 379.0, 447.0);
     NSURL *url3 = [NSURL URLWithString:@"https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif"];
-    [self.imageView3 sd_setImageWithURL:url3];
+    [self.imageView3 sd_setImageWithURL:url3 placeholderImage:nil options:SDWebImageAvoidAutoSetImage completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        self.imageView3.animatedImage = (FLAnimatedImage *)image;
+    }];
     // ... that's it!
     
     
