@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-  spec.name             = "FLAnimatedImage"
+  spec.name             = "FLAnimatedImage-SDWebImage"
   spec.version          = "1.0.10"
   spec.summary          = "Performant animated GIF engine for iOS"
   spec.description      = <<-DESC
